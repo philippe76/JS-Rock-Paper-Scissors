@@ -1,0 +1,77 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 15vh;
+  font-size: 1.5rem;
+}
+
+/* GAMERS AREA */
+.gamers {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+
+.gamers div {
+  width: 20%;
+  height: 10rem;
+}
+
+.gamers #you,
+.gamers #computer {
+  border: 1px solid gray;
+}
+
+/* RESULT AREA */
+.result {
+  padding: 3rem;
+  border: 1px solid gray;
+  font-size: 2rem;
+}
+
+/* MATCH AREA */
+.match {
+  width: 40%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.match img {
+  margin: 0 2rem;
+}
+
+/* CHOICE AREA */
+.choice {
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+}
+
+.choice img {
+  margin: 0.4rem 2rem;
+}
+
+/* FOOTER AERA */
+footer {
+  height: 2.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
