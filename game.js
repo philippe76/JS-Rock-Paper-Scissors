@@ -18,37 +18,37 @@ const PlayRound = (playerChoice, computerChoice) => {
 
     if (player === 'paper') {
         if (computer === 'paper') {
-            result = 'Tie! You both choose Paper' 
+            result = 'IT\'S A TIE !' 
         }
         else if (computer === 'rock') {
-            result = 'You win! Paper beats Rock' 
+            result = 'YOU WIN !' 
         }
         else {
-            result = 'You lose! Scissors beats Paper' 
+            result = 'YOU LOSE !' 
         }    
     }
     
     else if (player === 'rock') {
         if (computer === 'paper' ) {
-            result = 'You lose! Paper beats Rock' 
+            result = 'YOU LOSE !' 
         }
         else if (computer === 'rock') {
-            result = 'Tie! You both choose Rock' 
+            result = 'IT\'S A TIE !' 
         }
         else {
-            result = 'You win! Rock beats Scissors' 
+            result = 'YOU WIN !' 
         }
     }
     
     else {
         if (computer === 'paper' ) {
-            result = 'You win! Scissors beats Paper' 
+            result = 'YOU WIN !' 
         }
         else if (computer === 'rock') {
-            result = 'You lose! Rock beats Scissors'  
+            result = 'YOU LOSE !' 
         }
         else {
-            result = 'Tie! You both choose Scissors' 
+            result = 'IT\'S A TIE !' 
         } 
     }   
     return result
@@ -68,7 +68,7 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
         computerChoice = computerPlay();
         document.getElementById('user-choice').src = `img/big-${userChoice}.png`;
         document.getElementById('computer-choice').src = `img/big-${computerChoice}.png`;
-        let resultToDisplay =PlayRound(userChoice, computerChoice);
+        let resultToDisplay = PlayRound(userChoice, computerChoice);
         document.getElementById('result').innerHTML = resultToDisplay
     })
 })
