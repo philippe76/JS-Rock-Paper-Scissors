@@ -1,11 +1,13 @@
 
 const choices = ['rock', 'paper', 'scissors']
 
+// Pick a choice randomly 
 const computerPlay = () => {
     const randomIndex = Math.floor(Math.random()*choices.length);
     return choices[randomIndex]
 }
 
+// Make a round game
 const PlayRound = (playerChoice, computerChoice) => {
 
     let player = playerChoice.toLowerCase();
@@ -50,7 +52,7 @@ const PlayRound = (playerChoice, computerChoice) => {
     return result
 }
 
-
+// Make 5 round games
 const game = () => {
     for (let i=1; i<=5; i++){
         const playerChoice = computerPlay()
@@ -59,6 +61,8 @@ const game = () => {
     }
 }
 
-game();
+
+
+// game();
 
 
