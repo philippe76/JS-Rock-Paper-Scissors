@@ -20,12 +20,13 @@ body {
   color: ghostwhite;
 }
 
+main {
+  margin-bottom: 3rem;
+}
+
 /* HEADER */
 header {
   height: 15vh;
-  font-size: 1.5rem;
-  font-family: "Fredericka the Great", cursive;
-  letter-spacing: 0.3rem;
 }
 
 header h1 {
@@ -42,52 +43,60 @@ header h1 {
 }
 
 .gamers div {
-  width: 20%;
-  height: 10rem;
+  width: 15%;
+  height: 8rem;
   padding: 1rem;
 }
 
 .gamers #you,
 .gamers #computer {
-  border: 3px solid grey;
+  border: 3px solid gray;
+  box-shadow: 1px 1px 3px 1px gray;
   border-radius: 5%;
   font-size: 2.6rem;
   color: brown;
   background-color: #ebe6d6;
 }
 
-/* RESULT AREA */
-.result {
-  padding: 3rem;
-  border: 1px solid gray;
-  font-size: 2rem;
-}
-
 /* MATCH AREA */
 .match {
   width: 40%;
-  margin: 5rem auto 0;
+  margin: 3rem auto 0;
   padding: 3rem;
+  justify-content: space-between;
 }
 
 .match img {
   margin: 0 2rem;
 }
 
+/* RESULT AREA */
+.result {
+  font-size: 2rem;
+}
+
 /* CHOICE AREA */
 .choice {
   width: 50%;
-  margin: 5rem auto 0;
-  border: 1px solid gray;
+  margin: 3rem auto 0;
   text-align: center;
+  border: 3px solid gray;
+  box-shadow: 1px 1px 3px 1px gray;
+  border-radius: 2%;
 }
 
-.choice div:first {
+.choice-pics {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .choice img {
-  margin: 1.5rem 2rem 0.4rem 2rem;
+  margin: 1.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.choice img:hover {
+  transform: scale(1.2);
 }
 
 /* FOOTER */
@@ -100,4 +109,5 @@ footer {
 
 footer p {
   font-size: 1rem;
+  color: gray;
 }
