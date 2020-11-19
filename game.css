@@ -13,7 +13,7 @@
 
 /* MAIN STYLES */
 body {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #f7e9bc;
@@ -21,12 +21,12 @@ body {
 }
 
 main {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* HEADER */
 header {
-  height: 15vh;
+  height: 12vh;
 }
 
 header h1 {
@@ -64,10 +64,17 @@ header h1 {
   margin: 0;
 }
 
+#userRounds,
+#computerRounds {
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
 /* MATCH AREA */
 .match {
-  width: 50%;
-  margin: 3.5rem auto 0;
+  width: 55%;
+  margin: 3rem auto 0;
   padding: 3rem;
   justify-content: space-between;
 }

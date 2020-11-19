@@ -88,22 +88,35 @@ const game = (playerChoice) => {
             document.getElementById('userCount').innerHTML = userCount;
             document.getElementById('computerCount').innerHTML = computerCount;
             
-            // Update players rounds
-            
+            // Update players rounds            
             if (userCount === 5 || computerCount === 5) {  
-                userCount === 5 ? userRounds++ : computerRounds++;              
-                document.getElementById('userCount').innerHTML = 'Round: ' + userRounds;
-                document.getElementById('computerCount').innerHTML = 'Round: ' + computerRounds;
+                
+                userCount === 5 ? userRounds++ : computerRounds++;     
+
+                setTimeout( () => {
+                    document.getElementById('userCount').innerHTML = 'Rounds: ' + userRounds;
+                    document.getElementById('computerCount').innerHTML = 'Rounds: ' + computerRounds;
+                    document.getElementById('result').innerHTML = 'NEW ROUND';
+                    document.getElementById('user-choice').src = `img/transparent.png`;
+                    document.getElementById('computer-choice').src = `img/transparent.png`;
+                }, 1000);    
+
                 userCount = 0;
                 computerCount = 0 
-            } 
-
-
+                
+                setTimeout( () => { 
+                    document.getElementById('userCount').innerHTML = userCount;
+                    document.getElementById('computerCount').innerHTML = computerCount;
+                    document.getElementById('userRounds').innerHTML = userRounds;
+                    document.getElementById('computerRounds').innerHTML = computerRounds;
+                    // document.getElementById('result').innerHTML = null;
+                 }, 3000);
+            }              
 
         })
     })
 
-
+document.getElementById('date').innerHTML = new Date().getFullYear()
 
 
 
