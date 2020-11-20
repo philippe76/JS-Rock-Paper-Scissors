@@ -87,6 +87,24 @@ header h1 {
 .result {
   font-size: 3rem;
   color: chocolate;
+  display: flex;
+  flex-direction: column;
+}
+
+.result button {
+  color: rgb(141, 67, 14);
+  padding: 0.5rem;
+  border: 3px solid gray;
+  box-shadow: 1px 1px 3px 1px gray;
+  border-radius: 5%;
+  margin-top: 2rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.result button:hover {
+  transform: scale(0.9);
 }
 
 /* CHOICE AREA */

@@ -100,7 +100,7 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
 
 
 function winRound() {
-    
+
     userCount === 2 ? userRounds++ : computerRounds++;   
 
     // Update layout displaying
@@ -121,7 +121,7 @@ function winRound() {
         document.getElementById('computerCount').innerHTML = computerCount;
         document.getElementById('userRounds').innerHTML = userRounds;
         document.getElementById('computerRounds').innerHTML = computerRounds;
-    }, 3000);     
+    }, 2000);     
 }
 
 
@@ -132,18 +132,30 @@ function winGame() {
     document.getElementById('computerRounds').innerHTML = null;
     userCount = 0;
     computerCount = 0;
-    document.getElementById('result').innerHTML = userRounds === 2 ? 'WIN GAME!' : 'LOSE GAME!';
+    document.getElementById('result').innerHTML = userRounds === 2 ? 'WIN GAME!' : 'GAME OVER!';
     document.getElementById('userCount').innerHTML = "SCORE: " + userRounds;
     document.getElementById('computerCount').innerHTML = "SCORE: " + computerRounds;
     document.getElementById('user-choice').src = `img/transparent.png`;
     document.getElementById('computer-choice').src = `img/transparent.png`;
+    document.querySelector('.result button').style.display = 'inline';
 
     clearTimeout(endRound);
     clearTimeout(setData);
 }
-                
 
-                
+
+// Start a new game                 
+document.querySelector('.result button').addEventListener('click', (e) => {
+    e.target.style.display= 'none';
+    userRounds = 0;
+    computerRounds= 0;
+    document.getElementById('result').innerHTML = 'NEW GAME'
+    document.getElementById('userCount').innerHTML = userCount;
+    document.getElementById('computerCount').innerHTML = computerCount;
+    
+})
+
+
 // Get dynamic date for Footer
 document.getElementById('date').innerHTML = new Date().getFullYear()
                 
