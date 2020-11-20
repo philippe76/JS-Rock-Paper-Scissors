@@ -64,6 +64,10 @@ header h1 {
   margin: 0;
 }
 
+#mobile-text {
+  display: none;
+}
+
 #userRounds,
 #computerRounds {
   font-size: 1.5rem;
@@ -142,4 +146,68 @@ footer {
 footer p {
   font-size: 1rem;
   color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .gamers {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+
+  .gamers div {
+    height: 3rem;
+  }
+
+  #you,
+  #computer {
+    font-size: 1.4rem;
+  }
+
+  .gamers #mobile-text {
+    display: initial;
+  }
+
+  .gamers #pc-text {
+    display: none;
+  }
+
+  #userRounds,
+  #computerRounds {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .match {
+    margin: 5.5rem 0 0;
+    padding: 0;
+  }
+
+  .match img {
+    width: 40%;
+  }
+
+  .result {
+    font-size: 1.6rem;
+  }
+
+  .choice {
+    width: 90%;
+  }
+
+  .choice h2 {
+    display: none;
+  }
+
+  .choice-pics img {
+    width: 15%;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
 }

@@ -132,7 +132,11 @@ function winGame() {
     document.getElementById('computerRounds').innerHTML = null;
     userCount = 0;
     computerCount = 0;
-    document.getElementById('result').innerHTML = userRounds === 2 ? 'WIN GAME!' : 'GAME OVER!';
+
+    setTimeout( () => {
+        document.getElementById('result').innerHTML = userRounds === 2 ? 'WIN GAME!' : 'GAME OVER!';
+    }, 1500)
+
     document.getElementById('userCount').innerHTML = "SCORE: " + userRounds;
     document.getElementById('computerCount').innerHTML = "SCORE: " + computerRounds;
     document.getElementById('user-choice').src = `img/transparent.png`;
