@@ -10,6 +10,7 @@ let computerCount = 0;
 let userRounds = 0;
 let computerRounds = 0;
 
+// variables for timeOut
 let endRound;
 let setData;
 
@@ -64,14 +65,6 @@ const PlayRound = (playerChoice, computerChoice) => {
 }
 
 
-// Make 5 round games
-// const game = (playerChoice) => {
-//     for (let i=1; i<=5; i++){
-//         roundGame()
-//     }
-// }
-
-
 // Handle players clicks
 document.querySelectorAll('.choice-pics img').forEach(item => {
     item.addEventListener('click', () => {
@@ -95,52 +88,22 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
         
         // Handle round end            
         if (userCount === 2 || computerCount === 2) {    
-
-            winRound();
-            // userCount === 5 ? userRounds++ : computerRounds++;     
-            // var endRound = setTimeout( () => {
-            //     document.getElementById('userCount').innerHTML = 'Rounds: ' + userRounds;
-            //     document.getElementById('computerCount').innerHTML = 'Rounds: ' + computerRounds;
-            //     document.getElementById('result').innerHTML = 'NEW ROUND';
-            //     document.getElementById('user-choice').src = `img/transparent.png`;
-            //     document.getElementById('computer-choice').src = `img/transparent.png`;
-            // }, 1000);  
-            
-            // userCount = 0;
-            // computerCount = 0 
-        
-            // setTimeout( () => { 
-            //     document.getElementById('userCount').innerHTML = userCount;
-            //     document.getElementById('computerCount').innerHTML = computerCount;
-            //     document.getElementById('userRounds').innerHTML = userRounds;
-            //     document.getElementById('computerRounds').innerHTML = computerRounds;
-            //     }, 3000);     
+            winRound();  
         }       
         
         // Handle game end 
-        if (userRounds === 2 || computerRounds === 2) {  
-            
+        if (userRounds === 2 || computerRounds === 2) {              
             winGame();
-            // document.getElementById('userRounds').innerHTML = null;
-            // document.getElementById('computerRounds').innerHTML = null;
-            // userCount = 0;
-            // computerCount = 0;
-            // document.getElementById('result').innerHTML = userRounds === 2 ? 'YOU WIN !' : 'YOU LOSE !';
-            // document.getElementById('userCount').innerHTML = 'Rounds: ' + userRounds;
-            // document.getElementById('computerCount').innerHTML = 'Rounds: ' + computerRounds;
-            // document.getElementById('user-choice').src = `img/transparent.png`;
-            // document.getElementById('computer-choice').src = `img/transparent.png`;
-            // clearTimeout(endRound)
         }
-
     })
 })
 
 
 function winRound() {
-
+    
     userCount === 2 ? userRounds++ : computerRounds++;   
 
+    // Update layout displaying
     endRound = setTimeout( () => {
         document.getElementById('userCount').innerHTML = 'Rounds: ' + userRounds;
         document.getElementById('computerCount').innerHTML = 'Rounds: ' + computerRounds;
@@ -152,6 +115,7 @@ function winRound() {
     userCount = 0;
     computerCount = 0 
         
+    // Update counters
     setData = setTimeout( () => { 
         document.getElementById('userCount').innerHTML = userCount;
         document.getElementById('computerCount').innerHTML = computerCount;
@@ -162,6 +126,8 @@ function winRound() {
 
 
 function winGame() {
+
+    // Update layout displaying
     document.getElementById('userRounds').innerHTML = null;
     document.getElementById('computerRounds').innerHTML = null;
     userCount = 0;
@@ -171,6 +137,7 @@ function winGame() {
     document.getElementById('computerCount').innerHTML = "SCORE: " + computerRounds;
     document.getElementById('user-choice').src = `img/transparent.png`;
     document.getElementById('computer-choice').src = `img/transparent.png`;
+
     clearTimeout(endRound);
     clearTimeout(setData);
 }
