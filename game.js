@@ -30,35 +30,35 @@ const PlayRound = (playerChoice, computerChoice) => {
 
     if (player === 'paper') {
         if (computer === 'paper') {
-            result = 'IT\'S TIE !' 
+            result = 'IT\'S TIE' 
         }
         else if (computer === 'rock') {
-            result = 'YOU WIN !' 
+            result = 'YOU WIN' 
         }
         else {
-            result = 'YOU LOSE !' 
+            result = 'YOU LOSE' 
         }    
     }    
     else if (player === 'rock') {
         if (computer === 'paper' ) {
-            result = 'YOU LOSE !' 
+            result = 'YOU LOSE' 
         }
         else if (computer === 'rock') {
-            result = 'IT\'S TIE !' 
+            result = 'IT\'S TIE' 
         }
         else {
-            result = 'YOU WIN !' 
+            result = 'YOU WIN' 
         }
     }    
     else {
         if (computer === 'paper' ) {
-            result = 'YOU WIN !' 
+            result = 'YOU WIN' 
         }
         else if (computer === 'rock') {
-            result = 'YOU LOSE !' 
+            result = 'YOU LOSE' 
         }
         else {
-            result = 'IT\'S TIE !' 
+            result = 'IT\'S TIE' 
         } 
     }   
     return result
@@ -81,8 +81,8 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
         document.getElementById('result').innerHTML = resultToDisplay;
         
         // Update players counts
-        result === 'YOU WIN !' && userCount++ 
-        result === 'YOU LOSE !' && computerCount++;
+        result === 'YOU WIN' && userCount++ 
+        result === 'YOU LOSE' && computerCount++;
         document.getElementById('userCount').innerHTML = userCount;
         document.getElementById('computerCount').innerHTML = computerCount;
         
