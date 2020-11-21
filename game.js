@@ -15,7 +15,7 @@ let endRound;
 let setData;
 
 
-// Pick a choice randomly 
+// Choice randomly 
 const computerPlay = () => {
     const randomIndex = Math.floor(Math.random()*choices.length);
     return choices[randomIndex]
@@ -87,12 +87,12 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
         document.getElementById('computerCount').innerHTML = computerCount;
         
         // Handle round end            
-        if (userCount === 2 || computerCount === 2) {    
+        if (userCount === 5 || computerCount === 5) {    
             winRound();  
         }       
         
         // Handle game end 
-        if (userRounds === 2 || computerRounds === 2) {              
+        if (userRounds === 5 || computerRounds === 5) {              
             winGame();
         }
     })
@@ -101,7 +101,7 @@ document.querySelectorAll('.choice-pics img').forEach(item => {
 
 function winRound() {
 
-    userCount === 2 ? userRounds++ : computerRounds++;   
+    userCount === 5 ? userRounds++ : computerRounds++;   
 
     // Update layout displaying
     endRound = setTimeout( () => {
@@ -134,14 +134,14 @@ function winGame() {
     computerCount = 0;
 
     setTimeout( () => {
-        document.getElementById('result').innerHTML = userRounds === 2 ? 'WIN GAME!' : 'GAME OVER!';
+        document.getElementById('result').innerHTML = userRounds === 5 ? 'WIN GAME!' : 'GAME OVER!';
+        document.querySelector('.result button').style.display = 'inline';
     }, 1500)
 
     document.getElementById('userCount').innerHTML = "SCORE: " + userRounds;
     document.getElementById('computerCount').innerHTML = "SCORE: " + computerRounds;
     document.getElementById('user-choice').src = `img/transparent.png`;
     document.getElementById('computer-choice').src = `img/transparent.png`;
-    document.querySelector('.result button').style.display = 'inline';
 
     clearTimeout(endRound);
     clearTimeout(setData);
